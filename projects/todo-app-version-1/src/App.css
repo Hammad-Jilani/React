@@ -1,0 +1,19 @@
+
+h1{
+  font-weight: 700;
+  font-size: 50px;
+  margin: 10px;
+  margin-bottom: 25px;
+}
+input{
+  width: 100%;
+}
+.items-container{
+  text-align: left;
+}
+.hj-row{
+  margin: 10px;
+}
+.hj-btn{
+  width: 100px;
+}
