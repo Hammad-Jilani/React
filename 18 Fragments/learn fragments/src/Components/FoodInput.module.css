@@ -1,0 +1,7 @@
+.set{
+  width: 75%;
+  margin: 10px 40px;
+}
+.set:focus{
+  outline: none;
+}
