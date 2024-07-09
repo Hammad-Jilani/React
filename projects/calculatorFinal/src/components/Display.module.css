@@ -1,0 +1,8 @@
+.display{
+  margin: 10px;
+  width: 265px;
+  font-size: 25px;
+}
+input:focus{
+  outline: none;
+}
