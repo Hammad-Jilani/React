@@ -1,10 +1,14 @@
 import { useRef, useState } from "react";
 import style from "./AddTodo.module.css";
 import { IoAdd } from "react-icons/io5";
-function AddTodo({ onNewItem }) {
+import { TodoItemsContext } from "../store/todo-items-store";
+import { useContext } from "react";
+
+function AddTodo() {
   // const [todoName, setTodoName] = useState();
   // const [dueDate, setDueDate] = useState();
 
+  const { addNewItem } = useContext(TodoItemsContext);
   const todoNameElement = useRef();
   const dueDateElement = useRef();
 
@@ -15,13 +19,12 @@ function AddTodo({ onNewItem }) {
   //   setDueDate(e.target.value);
   // };
   function handleAddButton(event) {
-    // console.log(event);
     event.preventDefault();
     const todoName = todoNameElement.current.value;
     const dueDate = dueDateElement.current.value;
     todoNameElement.current.value = "";
     dueDateElement.current.value = "";
-    onNewItem(todoName, dueDate);
+    addNewItem(todoName, dueDate);
     // setDueDate("");
     // setTodoName("");
   }
@@ -49,7 +52,6 @@ function AddTodo({ onNewItem }) {
           <button
             type="submit"
             className={`btn btn-success ${style["hj-btn"]} `}
-            onClick={handleAddButton}
           >
             <IoAdd /> Add
           </button>

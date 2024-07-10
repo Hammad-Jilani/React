@@ -25,6 +25,10 @@ function App() {
   const handleNewItem = (itemName, itemDate) => {
     let newObject = [...todoItems, { name: itemName, dueDate: itemDate }];
     setTodoItems(newObject);
+    // setTodoItems((currValues) => [...currValues], {
+    //   name: itemName,
+    //   dueDate: itemDate,
+    // });
   };
 
   function handleDelete(todoItemName) {
